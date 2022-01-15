@@ -9,7 +9,8 @@
 
 ## Menjalankan projek
 
-```git clone 
+```
+   git clone 
    cd project
    composer install
    setup env
