@@ -36,7 +36,7 @@ generate fake data
    php artisan db:seed 
 ```
 
-endpoint
+## Endpoint
 
 ### GET
 - page(nullable, integer)
