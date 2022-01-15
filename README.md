@@ -7,9 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Menjalankan test
+## Menjalankan projek
 
-Pada terminal yang sudah ada di dalam directory, jalankan perintah: <br> ```php artisan test```
+```git clone```
+```cd project```
+```composer install```
+```setup env```
+```php artisan key:generate```
+```php artisan migrate```
+```php artisan test```
 
 ## Daftar Tes 
 
