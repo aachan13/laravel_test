@@ -38,13 +38,13 @@ generate fake data
 
 endpoint
 
-###GET
+### GET
 parameter: - page(nullable, integer)
 ```
 api/pegawai
 ```
 
-###POST
+### POST
 parameter: - nama(string, max: 10, required, unique), 
            - tanggal_masuk (required, date, tanggal sebelum sekarang), 
            - total_gaji (integer, required, min 4000000, max:10000000)
@@ -52,9 +52,9 @@ parameter: - nama(string, max: 10, required, unique),
 api/pegawai
 ```
 
-###GET
+### GET
 parameter: - bulan(format YYYY-MM), 
--          - page(nullable, integer)
+           - page(nullable, integer)
 ```
 api/kasbon 
 ```
@@ -66,13 +66,13 @@ parameter: - pegawai_id(required, integer, exist(ada pada tabel pegawai), bekerj
 api/kasbon 
 ```
 
-###PATCH
+### PATCH
 parameter: - id (required, exist(ada pada tabel kasbon), karbon belum disetujui),
 ```
 api/kasbon/setujui/{id}
 ```
 
-###POST
+### POST
 ```
 api/kasbon/setujui-masal
 ```
