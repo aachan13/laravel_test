@@ -39,35 +39,35 @@ generate fake data
 endpoint
 
 ### GET
-parameter: - page(nullable, integer)
+- page(nullable, integer)
 ```
 api/pegawai
 ```
 
 ### POST
-parameter: - nama(string, max: 10, required, unique), 
-           - tanggal_masuk (required, date, tanggal sebelum sekarang), 
-           - total_gaji (integer, required, min 4000000, max:10000000)
+- nama(string, max: 10, required, unique), 
+- tanggal_masuk (required, date, tanggal sebelum sekarang), 
+- total_gaji (integer, required, min 4000000, max:10000000)
 ```
 api/pegawai
 ```
 
 ### GET
-parameter: - bulan(format YYYY-MM), 
-           - page(nullable, integer)
+- bulan(format YYYY-MM), 
+- page(nullable, integer)
 ```
 api/kasbon 
 ```
 
 ###POST
-parameter: - pegawai_id(required, integer, exist(ada pada tabel pegawai), bekerja 1 tahun, 3 kasbon pada bulan berjalan),
-           - total_kasbon (required, integer, jumlah kasbon pada bulan berjalan tidak lebih dari setengah gaji pegawai)
+- pegawai_id(required, integer, exist(ada pada tabel pegawai), bekerja 1 tahun, 3 kasbon pada bulan berjalan),
+- total_kasbon (required, integer, jumlah kasbon pada bulan berjalan tidak lebih dari setengah gaji pegawai)
 ```
 api/kasbon 
 ```
 
 ### PATCH
-parameter: - id (required, exist(ada pada tabel kasbon), karbon belum disetujui),
+- id (required, exist(ada pada tabel kasbon), karbon belum disetujui),
 ```
 api/kasbon/setujui/{id}
 ```
