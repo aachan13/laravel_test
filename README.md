@@ -59,7 +59,7 @@ api/pegawai
 api/kasbon 
 ```
 
-###POST
+### POST
 - pegawai_id(required, integer, exist(ada pada tabel pegawai), bekerja 1 tahun, 3 kasbon pada bulan berjalan),
 - total_kasbon (required, integer, jumlah kasbon pada bulan berjalan tidak lebih dari setengah gaji pegawai)
 ```
