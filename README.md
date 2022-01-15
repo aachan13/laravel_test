@@ -7,59 +7,290 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Menjalankan projek
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```
+   git clone 
+```
+```
+   cd project
+```
+```
+   composer install
+```
+```
+   setup env, database
+```
+```
+   php artisan key:generate
+```
+```
+   php artisan migrate
+```
+```
+   php artisan test
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Daftar Tes 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Terdapat total 48 tes di dalam projek ini.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Tes Pegawai
+```
+    Feature/PegawaiTest.php
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### test_get_pegawai
 
-## Laravel Sponsors
+Tes get endpoint api pegawai.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+### test_get_pegawai_pagination
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+Tes pagination api pegawai.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### test_pegawai_pagination_with_page
 
-## Code of Conduct
+Tes pagination dengan tambahan parameter page.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+### test_pegawai_pagination_with_page_not_integer
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Tes pagination dengan parameter page yang bukan integer.
+
+
+### test_pegawai_pagination_with_page_null
+
+Tes pagination dengan request ```page``` kosong atau null.
+
+
+### test_pegawai_pagination_with_page_null
+
+Tes pagination dengan request ```page``` kosong atau null.
+
+
+### test_uppercase_nama_pegawai
+
+Tes nama pegawai pada response adalah huruf besar semua.
+
+
+### test_first_name_nama_pegawai
+
+Tes nama pegawai pada response adalah nama pertama (Cth: Achmad Fadhil = Achmad).
+
+
+### test_format_tanggal_masuk_pegawai
+
+Tes format tanggal_masuk pegawai pada response adalah DD-MM-YYYY (id).
+
+
+### test_format_gaji_pegawai
+
+Tes format total_gaji pegawai pada response adalah #.### (ribuan).
+
+
+### test_store_pegawai
+
+Tes input pegawai.
+
+
+### test_store_pegawai_missing_nama
+
+Tes input pegawai tanpa nama.
+
+
+### test_store_pegawai_non_string_nama
+
+Tes input pegawai dengan nama yang bukan string (ex:boolean).
+
+
+### test_store_pegawai_non_unique_name
+
+Tes input pegawai dengan nama yang kembar.
+
+
+### test_store_pegawai_nama_more_than_10_character
+
+Tes input pegawai dengan nama lebih dari 10 karakter.
+
+
+### test_store_pegawai_missing_tanggal_masuk
+
+Tes input pegawai tanpa tanggal_masuk.
+
+
+### test_store_pegawai_tanggal_masuk_not_date
+
+Tes input pegawai dengan tanggal masuk yang bukan format tanggal.
+
+
+### test_store_pegawai_tanggal_masuk_greater_than_now
+
+Tes input pegawai dengan tanggal masuk yang lebih dari tanggal sekarang.
+
+
+### test_store_pegawai_missing_total_gaji
+
+Tes input pegawai tanpa total gaji.
+
+
+### test_store_pegawai_non_integer_total_gaji
+
+Tes input pegawai dengan total gaji yang bukan integer.
+
+
+### test_store_pegawai_gaji_lower_than_4000000
+
+Tes input pegawai dengan total gaji kurang dari yang ditentukan (Cth: 4000000).
+
+
+### test_store_pegawai_gaji_greater_than_10000000
+
+Tes input pegawai dengan total gaji kurang dari yang ditentukan (Cth: 10000000).
+
+
+## Tes Kasbon
+```
+    Feature/KasbonTest.php
+```
+
+### test_get_kasbon
+
+Tes endpoint api kasbon dengan parameter bulan (YYYY-MM).
+
+
+### test_get_kasbon_missing_bulan
+
+Tes endpoint api kasbon tanpa parameter bulan.
+
+
+### test_get_kasbon_non_integer_belum_disetujui
+
+Tes endpoint api kasbon dengan parameter belum disetujui bukan integer.
+
+
+### test_get_kasbon_non_integer_belum_disetujui
+
+Tes get kasbon dengan nilai parameter belum disetujui = 1 (menampilkan kasbon yang belum disetujui).
+
+
+### test_get_kasbon_with_non_integer_page
+
+Tes get kasbon dengan parameter page bukan integer.
+
+
+### test_get_kasbon_pagination
+
+Tes pagination api kasbon.
+
+
+### test_format_tanggal_diajukan
+
+Tes format tanggal_diajukan pada response adalah DD-MM-YYYY (id).
+
+
+### test_format_tanggal_disetujui
+
+Tes format tanggal_disetujui pada response adalah DD-MM-YYYY (id).
+
+
+### test_format_tanggal_disetujui_without_value
+
+Tes format tanggal_disetujui pada response ketika null harus bernilai false.
+
+
+### test_relasi_nama_pegawai
+
+Tes response kasbon memiliki nama_pegawai dari tabel pegawai.
+
+
+### test_relasi_nama_pegawai
+
+Tes response kasbon memiliki nama_pegawai dari tabel pegawai.
+
+
+### test_format_total_kasbon
+
+Tes format total_kasbon pada response adalah #.### (ribuan).
+
+
+### test_store_kasbon
+
+Tes input data kasbon.
+
+
+### test_store_kasbon_non_integer_pegawai_id
+
+Tes input data kasbon dengan parameter pegawai_id bukan integer.
+
+
+### test_store_kasbon_missing_pegawai_id
+
+Tes input data kasbon tanpa parameter pegawai_id.
+
+
+### test_store_kasbon_pegawai_not_1_year
+
+Tes input data kasbon dengan tanggal_masuk pegawai yang belum 1 tahun.
+
+
+### test_store_kasbon_pegawai_greater_than_3_kasbon
+
+Tes input data kasbon dengan pegawai yang sudah memiliki 3 kasbon pada bulan berjalan.
+
+
+### test_store_kasbon_non_integer_total_kasbon
+
+Tes input data kasbon dengan parameter total_kasbon bukan integer.
+
+
+### test_store_kasbon_batas_jumlah_kasbon
+
+Tes input data kasbon dengan total_kasbon melebihi 1/2 gaji pegawai.
+
+
+### test_store_kasbon_batas_jumlah_kasbon
+
+Tes input data kasbon dengan total_kasbon melebihi 1/2 gaji pegawai.
+
+
+### test_patch_setujui_kasbon
+
+Tes update tanggal_disetujui kasbon sesuai dengan waktu insert.
+
+
+### test_patch_setujui_kasbon_missing_id
+
+Tes update tanggal_disetujui kasbon tanpa menggunakan parameter id.
+
+
+### test_patch_setujui_kasbon_id_not_found
+
+Tes update tanggal_disetujui kasbon menggunakan parameter id yang tidak ada pada tabel pegawai.
+
+
+### test_patch_setujui_kasbon_tanggal_disetujui_is_not_null
+
+Tes update tanggal_disetujui kasbon dengan kasbon yang sudah disetujui.
+
+
+### test_patch_setujui_kasbon_tanggal_disetujui_is_not_null
+
+Tes update tanggal_disetujui kasbon dengan kasbon yang sudah disetujui.
+
+
+### test_kasbon_setujui_masal
+
+Tes setujui kasbon secara masal.
+
+
+### test_kasbon_setujui_masal_job_dispatched
+
+Tes setujui kasbon secara masal dan mengecek job queue berjalan.
+
+
 
 ## License
 
