@@ -18,7 +18,7 @@ class PegawaiFactory extends Factory
     {
         return [
             'nama' => $this->faker->text(10),
-            'tanggal_masuk' => $this->faker->date(),
+            'tanggal_masuk' => $this->faker->dateTimeBetween('-2 year', '-1 month'),
             'total_gaji' => $this->faker->randomNumber('8', true),
         ];
     }
