@@ -17,9 +17,15 @@ Terdapat total 48 tes di dalam projek ini.
 
 ### test_get_pegawai
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Tes akses endpoint api pegawai.
 
-## Laravel Sponsors
+### test_get_pegawai_pagination
+
+Tes pagination api pegawai.
+
+### test_pegawai_pagination_with_page
+
+Tes pagination dengan tambahan request ```page```;
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
