@@ -9,13 +9,13 @@
 
 ## Menjalankan projek
 
-```git clone```
-```cd project```
-```composer install```
-```setup env```
-```php artisan key:generate```
-```php artisan migrate```
-```php artisan test```
+```git clone``` <br>
+```cd project```<br>
+```composer install```<br>
+```setup env```<br>
+```php artisan key:generate```<br>
+```php artisan migrate```<br>
+```php artisan test```<br>
 
 ## Daftar Tes 
 
