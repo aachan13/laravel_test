@@ -9,12 +9,13 @@
 
 ## Menjalankan test
 
-Pada terminal yang sudah ada di dalam directory, jalankan perintah: <br>
-```php artisan test```
+Pada terminal yang sudah ada di dalam directory, jalankan perintah: <br> ```php artisan test```
 
-## Learning Laravel
+## Daftar Tes 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Terdapat total 48 tes di dalam projek ini.
+
+### test_get_pegawai
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
