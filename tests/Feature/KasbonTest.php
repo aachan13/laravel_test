@@ -371,10 +371,21 @@ class KasbonTest extends TestCase
             'total_gaji' => 5000000
         ]);
 
+        // kasbon bulan Januari
+        $pegawai->kasbon()->create([
+            'tanggal_diajukan' => '2022-01-02',
+            'total_kasbon' => 1500000
+        ]);
+
+        $pegawai->kasbon()->create([
+            'tanggal_diajukan' => '2022-01-03',
+            'total_kasbon' => 100000
+        ]);
+
         $response = $this->postJson('/api/kasbon', [
             'tanggal_diajukan' => now(),
             'pegawai_id' => $pegawai->id,
-            'total_kasbon' => 2600000
+            'total_kasbon' => 1000000
         ]);
 
         $response->assertStatus(422)
