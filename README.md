@@ -9,6 +9,7 @@
 
 ## Menjalankan test
 
+Pada terminal yang sudah ada di dalam directory, jalankan perintah: <br>
 ```php artisan test```
 
 ## Learning Laravel
