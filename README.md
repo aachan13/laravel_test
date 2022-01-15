@@ -15,49 +15,59 @@ Pada terminal yang sudah ada di dalam directory, jalankan perintah: <br> ```php 
 
 Terdapat total 48 tes di dalam projek ini.
 
+
 ### test_get_pegawai
 
 Tes akses endpoint api pegawai.
+
 
 ### test_get_pegawai_pagination
 
 Tes pagination api pegawai.
 
+
 ### test_pegawai_pagination_with_page
 
-Tes pagination dengan tambahan request ```page```;
+Tes pagination dengan tambahan request ```page```.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+### test_pegawai_pagination_with_page_not_integer
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+Tes pagination dengan request ```page``` bukan **integer**.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### test_pegawai_pagination_with_page_null
 
-## Code of Conduct
+Tes pagination dengan request ```page``` kosong atau null.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+### test_pegawai_pagination_with_page_null
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Tes pagination dengan request ```page``` kosong atau null.
+
+
+### test_uppercase_nama_pegawai
+
+Tes nama pegawai pada response adalah huruf besar semua.
+
+
+### test_first_name_nama_pegawai
+
+Tes nama pegawai pada response adalah nama pertama (Cth: Achmad Fadhil = Achmad).
+
+
+### test_format_tanggal_masuk_pegawai
+
+Tes format tanggal_masuk pegawai pada response adalah DD-MMMM-YYYY (id).
+
+
+### test_format_gaji_pegawai
+
+Tes format total_gaji pegawai pada response adalah #.### (ribuan).
+
+
+
+
 
 ## License
 
