@@ -31,9 +31,14 @@
    php artisan test
 ```
 
+generate fake data
+```
+   php artisan db:seed 
+```
+
 ## Daftar Tes 
 
-Terdapat total 50 tes di dalam projek ini.
+Terdapat total 50 tes di dalam projek ini. 
 
 
 ## Tes Pegawai
