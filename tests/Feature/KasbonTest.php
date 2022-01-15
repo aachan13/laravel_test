@@ -24,6 +24,7 @@ class KasbonTest extends TestCase
         Pegawai::factory(10)->create();
         Kasbon::factory(10)->create();
 
+        // belum disetujui nullable
         $response = $this->json('GET', '/api/kasbon', [
                         'bulan' => '2022-01',
                     ]);
@@ -40,6 +41,21 @@ class KasbonTest extends TestCase
         $response->assertStatus(422)
                     ->assertInvalid([
                         'bulan' => 'The bulan field is required.',
+                    ]);
+    }
+
+    public function test_get_kasbon_incorrect_bulan_format(){
+
+        Pegawai::factory(10)->create();
+        Kasbon::factory(10)->create();
+
+        $response = $this->json('GET', '/api/kasbon', [
+                        'bulan' => '01',
+                    ]);
+
+        $response->assertStatus(422)
+                    ->assertInvalid([
+                        'bulan' => 'The bulan does not match the format Y-m.',
                     ]);
     }
 
