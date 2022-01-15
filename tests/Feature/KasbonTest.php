@@ -435,6 +435,7 @@ class KasbonTest extends TestCase
 
         $kasbon = Kasbon::create([
             'tanggal_diajukan' => '2022-01-03',
+            'tanggal_disetujui' => null,
             'pegawai_id' => $pegawai->id,
             'total_kasbon' => 20000
         ]);
