@@ -33,7 +33,7 @@
 
 ## Daftar Tes 
 
-Terdapat total 48 tes di dalam projek ini.
+Terdapat total 50 tes di dalam projek ini.
 
 
 ## Tes Pegawai
@@ -166,12 +166,17 @@ Tes endpoint api kasbon dengan parameter bulan (YYYY-MM).
 Tes endpoint api kasbon tanpa parameter bulan.
 
 
+### test_get_kasbon_incorrect_bulan_format
+
+Tes endpoint api kasbon dengan parameter bulan yang tidak sesuai format YYYY-MM.
+
+
 ### test_get_kasbon_non_integer_belum_disetujui
 
 Tes endpoint api kasbon dengan parameter belum disetujui bukan integer.
 
 
-### test_get_kasbon_non_integer_belum_disetujui
+### test_get_kasbon_belum_disetujui_is_1
 
 Tes get kasbon dengan nilai parameter belum disetujui = 1 (menampilkan kasbon yang belum disetujui).
 
@@ -229,6 +234,11 @@ Tes input data kasbon dengan parameter pegawai_id bukan integer.
 ### test_store_kasbon_missing_pegawai_id
 
 Tes input data kasbon tanpa parameter pegawai_id.
+
+
+### test_store_kasbon_with_non_pegawai_id
+
+Tes input data kasbon dengan parameter pegawai_id yang tidak valid (bukan dari tabel pegawai).
 
 
 ### test_store_kasbon_pegawai_not_1_year
