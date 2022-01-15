@@ -33,7 +33,7 @@
 
 ## Daftar Tes 
 
-Terdapat total 48 tes di dalam projek ini.
+Terdapat total 50 tes di dalam projek ini.
 
 
 ## Tes Pegawai
