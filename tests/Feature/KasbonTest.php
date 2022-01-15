@@ -373,6 +373,7 @@ class KasbonTest extends TestCase
                 ]);
     }
 
+    // total kasbon
     public function test_store_kasbon_non_integer_total_kasbon(){
         // bekerja 1 Januari 2021
         $pegawai = Pegawai::create([
