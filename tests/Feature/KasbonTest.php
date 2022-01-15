@@ -228,7 +228,7 @@ class KasbonTest extends TestCase
             'bulan' => '2022-01',
         ]);
 
-        $this->assertTrue($response['data'][0]['total_kasbon'] == number_format($kasbon->total_kasbon, '0', '', '.'));
+        $this->assertTrue($response['data'][0]['total_kasbon'] == number_format($kasbon->total_kasbon, '2', '', '.'));
     }
 
     public function test_store_kasbon(){

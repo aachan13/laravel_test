@@ -19,7 +19,7 @@ class KasbonResource extends JsonResource
             'tanggal_diajukan' => $this->tanggal_diajukan->format('d-m-Y'),
             'tanggal_disetujui' => isset($this->tanggal_disetujui) ? $this->tanggal_disetujui->format('d-m-Y') : null,
             'nama_pegawai' => $this->pegawai->nama,
-            'total_kasbon' => number_format($this->total_kasbon, 2, '', '.')
+            'total_kasbon' => number_format($this->total_kasbon, 0, '', '.')
         ];
     }
 }
