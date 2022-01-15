@@ -216,6 +216,81 @@ Tes response kasbon memiliki nama_pegawai dari tabel pegawai.
 Tes format total_kasbon pada response adalah #.### (ribuan).
 
 
+### test_store_kasbon
+
+Tes input data kasbon.
+
+
+### test_store_kasbon_non_integer_pegawai_id
+
+Tes input data kasbon dengan parameter pegawai_id bukan integer.
+
+
+### test_store_kasbon_missing_pegawai_id
+
+Tes input data kasbon tanpa parameter pegawai_id.
+
+
+### test_store_kasbon_pegawai_not_1_year
+
+Tes input data kasbon dengan tanggal_masuk pegawai yang belum 1 tahun.
+
+
+### test_store_kasbon_pegawai_greater_than_3_kasbon
+
+Tes input data kasbon dengan pegawai yang sudah memiliki 3 kasbon pada bulan berjalan.
+
+
+### test_store_kasbon_non_integer_total_kasbon
+
+Tes input data kasbon dengan parameter total_kasbon bukan integer.
+
+
+### test_store_kasbon_batas_jumlah_kasbon
+
+Tes input data kasbon dengan total_kasbon melebihi 1/2 gaji pegawai.
+
+
+### test_store_kasbon_batas_jumlah_kasbon
+
+Tes input data kasbon dengan total_kasbon melebihi 1/2 gaji pegawai.
+
+
+### test_patch_setujui_kasbon
+
+Tes update tanggal_disetujui kasbon sesuai dengan waktu insert.
+
+
+### test_patch_setujui_kasbon_missing_id
+
+Tes update tanggal_disetujui kasbon tanpa menggunakan parameter id.
+
+
+### test_patch_setujui_kasbon_id_not_found
+
+Tes update tanggal_disetujui kasbon menggunakan parameter id yang tidak ada pada tabel pegawai.
+
+
+### test_patch_setujui_kasbon_tanggal_disetujui_is_not_null
+
+Tes update tanggal_disetujui kasbon dengan kasbon yang sudah disetujui.
+
+
+### test_patch_setujui_kasbon_tanggal_disetujui_is_not_null
+
+Tes update tanggal_disetujui kasbon dengan kasbon yang sudah disetujui.
+
+
+### test_kasbon_setujui_masal
+
+Tes setujui kasbon secara masal.
+
+
+### test_kasbon_setujui_masal_job_dispatched
+
+Tes setujui kasbon secara masal dan mengecek job queue berjalan.
+
+
 
 ## License
 
