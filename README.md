@@ -11,13 +11,25 @@
 
 ```
    git clone 
+```
+```
    cd project
+```
+```
    composer install
+```
+```
    setup env
+```
+```
    php artisan key:generate
+```
+```
    php artisan migrate
+```
+```
    php artisan test
- ```
+```
 
 ## Daftar Tes 
 
