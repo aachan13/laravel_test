@@ -12,26 +12,13 @@ class Kasbon extends Model
 
     protected $table = 'kasbon';
     protected $guarded = [];
-    protected $hidden = [
-        'pegawai',
-        'pegawai_id'
-    ];
-
-    protected $appends = [
-        'nama_pegawai'
-    ];
 
     protected $casts = [
         'tanggal_diajukan' => 'datetime',
         'tanggal_disetujui'=> 'datetime',
     ];
 
-    public function getNamaPegawaiAttribute(){
-        
-        return $this->pegawai->nama;
-    }
-
-
+    
     // --------------------------------------SCOPE---------------------------------------
     public function scopeFilterKasbon($query, $bulan, $belumDisetujui = ''){
         
