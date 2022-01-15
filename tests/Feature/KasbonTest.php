@@ -300,6 +300,20 @@ class KasbonTest extends TestCase
                 ]);
     }
 
+    public function test_store_kasbon_with_non_pegawai_id(){
+
+        $response = $this->postJson('/api/kasbon', [
+            'tanggal_diajukan' => now(),
+            'pegawai_id' => 99,
+            'total_kasbon' => 500000
+        ]);
+
+        $response->assertStatus(422)
+                ->assertInvalid([
+                    'pegawai_id' => 'The selected pegawai id is invalid.',
+                ]);
+    }
+
     public function test_store_kasbon_pegawai_not_1_year(){
 
         // 20 Agustus 2021
